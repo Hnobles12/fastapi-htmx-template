@@ -1,0 +1,41 @@
+{% extends "base.jinja2" %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+    <div class="section">
+        <div class="columns">
+            <div class="column is-one-third is-offset-one-third">
+                <div class="box is-centered">
+                    <div class="section">
+                        <h1 class="title" style="align-self: center;">Sign Up</h1>
+                    </div>
+                    <form hx-post="/signup/submit">
+                        <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control">
+                                <input class="input" type="text" id="username" name="username" placeholder="Username" value="">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control ">
+                                <input class="input" type="email" id="email" name="email" placeholder="Email" value="">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control">
+                                <input class="input" id="password" type="password" name="password" placeholder="Password" value="">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit" class="button is-primary" >Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
